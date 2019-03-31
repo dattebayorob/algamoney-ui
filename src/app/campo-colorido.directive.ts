@@ -1,16 +1,18 @@
-import { Directive, ElementRef, Renderer2, HostListener, HostBinding } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener, HostBinding, Input } from '@angular/core';
 
 @Directive({
   selector: '[appCampoColorido]'
 })
 export class CampoColoridoDirective {
 
+  @Input() bgColor = 'transparent';
+  @Input() fontColor = 'black';
   @HostBinding('style.backgroundColor') bg: string;
   @HostBinding('style.color') color: string;
 
   @HostListener('mouseover') onMouseOver(){
-    this.bg = 'black';
-    this.color = 'white';
+    this.bg = this.bgColor;
+    this.color = this.fontColor;
    }
   @HostListener('mouseout') onMouseOut(){
      this.bg = 'transparent';
