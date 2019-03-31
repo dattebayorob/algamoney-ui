@@ -1,0 +1,39 @@
+.navbar{
+  background-color: #1e94d2;
+  padding: 10px 0;
+}
+.navbar .ui-g-12 > a{
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+.navbar ul{
+  background-color: #3a3633;
+  position: fixed;
+  margin: 0;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  padding: 0%;
+  width: 15%;
+  z-index: 99999;
+  list-style: none;
+}
+.navbar ul>li{
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 70%;
+  padding: 15px 15%;
+  border-bottom: #555555 solid 1px;
+}
+
+.navbar ul>li.header{
+  margin-top: 20px;
+}
+.navbar ul > li a{
+  text-decoration: none;
+  color: #c0bbb7;
+}
+.navbar ul > li a:hover{
+  color: white;
+}
