@@ -3,7 +3,12 @@
     <div class="ui-g-12"><h1>Pessoas</h1></div>
     <div class="ui-g-12 ui-fluid">
       <label>Nome</label>
-      <input type="text" pInputText appCampoColorido [bgColor]="'black'" [fontColor]="'white'">
+      <input type="text" pInputText appCampoColorido [bgColor]="'black'"
+                          [fontColor]="'white'" #campo="campoColorido">
+    </div>
+    <div class="ui-g-12">
+        <button pButton type="submit" label="Campo Escuro" (click)="campo.onMouseOver()"></button>
+        <button pButton type="submit" label="Campo Claro" (click)="campo.onMouseOut()"></button>
     </div>
     <div class="ui-g-12">
       <button pButton type="submit" label="Pesquisar"></button>
