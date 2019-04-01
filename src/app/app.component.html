@@ -1,23 +1,26 @@
 <div class="container">
-  <form action="">
+  {{usuario | json}}
+  {{form.valid}}
+  <form #form="ngForm" (ngSubmit)="save(form)">
     <div class="form-group">
       <label>Nome</label>
-      <input type="text">
+      <input type="text" name="nome" [(ngModel)]="usuario.nome"
+          required minlength="10">
     </div>
     <div class="form-group">
       <label>Email</label>
-      <input type="text">
+      <input type="text" name="email" [(ngModel)]="usuario.email"
+        required email>
     </div>
     <div class="form-group">
       <label>Profissão</label>
-      <select name="" id="">
+      <select name="" id="" name="profissao" [(ngModel)]="usuario.profissaoId">
         <option value="">Selecione</option>
-        <option value="">Engenheiro</option>
-        <option value="">Dentista</option>
+        <option *ngFor="let p of profissoes" [value]="p.id">{{p.nome}}</option>
       </select>
     </div>
     <div class="form-group">
-      <button type="submit">Salvar</button>
+      <button type="submit" [disabled]="!form.valid">Salvar</button>
     </div>
   </form>
 </div>
