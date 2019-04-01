@@ -11,6 +11,7 @@ import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos
 import { NavbarComponent } from './navbar/navbar.component';
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { CampoColoridoDirective } from './campo-colorido.directive';
+import { PipesTestsComponent } from './pipes-tests/pipes-tests.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CampoColoridoDirective } from './campo-colorido.directive';
     LancamentosPesquisaComponent,
     NavbarComponent,
     PessoasPesquisaComponent,
-    CampoColoridoDirective
+    CampoColoridoDirective,
+    PipesTestsComponent
   ],
   imports: [
     BrowserModule,
