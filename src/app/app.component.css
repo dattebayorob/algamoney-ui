@@ -31,3 +31,6 @@ body{
   padding: 1%;
   border: none;
 }
+input.ng-invalid.ng-touched {
+  border: solid 1px red !important;
+}
